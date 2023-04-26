@@ -7,10 +7,13 @@ object Versions {
     const val junit = "4.13.2"
     const val junitExt = "1.1.5"
     const val espressoCore = "3.5.1"
+    const val splashScreen = "1.0.0"
 
     const val compileSdk = 33
     const val minSdk = 24
     const val targetSdk = 33
     const val versionCode = 1
     const val versionName = "1.0"
+
+    const val chatSdk = "1.1.0"
 }

@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "PostOffice"
 include ':app'
+include ':chat'
+include ':onboarding'

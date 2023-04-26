@@ -7,5 +7,13 @@ object Dependencies {
     val junit by lazy { "junit:junit:${Versions.junit}" }
     val junitExt by lazy { "androidx.test.ext:junit:${Versions.junitExt}" }
     val espressoCore by lazy { "androidx.test.espresso:espresso-core:${Versions.espressoCore}" }
+    val splashScreen by lazy {"androidx.core:core-splashscreen:${Versions.splashScreen}"}
 
+    val chatSdk by lazy {"io.agora.rtc:chat-sdk:${Versions.chatSdk}"}
+
+}
+
+object Modules{
+    val chat = ":chat"
+    val onboarding = ":onboarding"
 }

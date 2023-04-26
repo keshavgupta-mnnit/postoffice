@@ -1,24 +1,22 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
 }
 
 android {
-    compileSdk = Versions.compileSdk
+    namespace = "com.kgcorp.postoffice.chat"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.kgcorp.postoffice"
-
-        minSdk = Versions.minSdk
-        targetSdk = Versions.targetSdk
-        versionCode = Versions.versionCode
-        versionName = Versions.versionName
+        minSdk = 24
+        targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
-        getByName("release") {
+        release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -36,6 +34,7 @@ android {
 }
 
 dependencies {
+
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
@@ -44,8 +43,5 @@ dependencies {
     androidTestImplementation(Dependencies.junitExt)
     androidTestImplementation(Dependencies.espressoCore)
 
-    implementation(project(Modules.chat))
-    implementation(project(Modules.onboarding))
-
-    implementation(Dependencies.splashScreen)
+    implementation(Dependencies.chatSdk)
 }
